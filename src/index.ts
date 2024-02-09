@@ -19,3 +19,5 @@ app.use('/api/url',url_routes);
 app.listen(port,()=>{
   console.log(`running port ${port}`);
 })
+
+export default app

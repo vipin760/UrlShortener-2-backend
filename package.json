@@ -9,7 +9,7 @@
     "lint": "tslint -c tslint.json src/**/*.ts",
     "prepublish": "npm run build",
     "watch":"tsc -w",
-    "dev":"nodemon dist/index.js"
+    "dev":"nodemon index.ts"
   }, 
   "author": "",
   "license": "ISC",
