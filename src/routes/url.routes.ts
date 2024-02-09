@@ -4,6 +4,7 @@ import UrlModel from "../model/url.model";
 import shortId from 'shortid'
 const router = Router()
 
+
 router.post('/',asyncHandler( async (req:Request,res:Response)=>{
 try {
     const { url } = req.body
@@ -23,6 +24,17 @@ try {
     res.status(500).send({data:"",message:"internal server down"})
 }
 }))
+
+router.get("/a",asyncHandler (async(_req:Request,res:Response)=>{
+    try {
+        console.log("working");
+        
+        res.status(200).send({messege:"hello"})
+    } catch (error) {
+        res.json("error")
+    }
+}))
+
 
 router.get('/analytics',asyncHandler( async(req:Request,res:Response)=>{
     try {

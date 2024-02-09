@@ -76,6 +76,18 @@ router.post('/', (0, express_async_handler_1.default)(function (req, res) { retu
         }
     });
 }); }));
+router.get("/a", (0, express_async_handler_1.default)(function (_req, res) { return __awaiter(void 0, void 0, void 0, function () {
+    return __generator(this, function (_a) {
+        try {
+            console.log("working");
+            res.status(200).send({ messege: "hello" });
+        }
+        catch (error) {
+            res.json("error");
+        }
+        return [2 /*return*/];
+    });
+}); }));
 router.get('/analytics', (0, express_async_handler_1.default)(function (req, res) { return __awaiter(void 0, void 0, void 0, function () {
     var urlString, newUrl, path, shortid, urlData, urlAnalytics, error_2;
     return __generator(this, function (_a) {
