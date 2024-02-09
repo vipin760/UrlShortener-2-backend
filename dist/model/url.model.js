@@ -8,3 +8,4 @@ var urlSchema = new mongoose_1.Schema({
 }, { timestamps: true });
 var UrlModel = (0, mongoose_1.model)('url', urlSchema);
 exports.default = UrlModel;
+//# sourceMappingURL=url.model.js.map

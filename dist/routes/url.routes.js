@@ -179,3 +179,4 @@ router.get('/:id', (0, express_async_handler_1.default)(function (req, res) { re
 //     }
 // }))
 exports.default = router;
+//# sourceMappingURL=url.routes.js.map
