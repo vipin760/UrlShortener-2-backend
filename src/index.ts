@@ -3,6 +3,7 @@ import dotenv from 'dotenv'
 import { dbConnect } from './config/conf'
 import cors from 'cors'
 const app = express()
+
 const port = process.env.Port || 3000
 dotenv.config()
 dbConnect()
