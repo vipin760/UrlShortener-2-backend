@@ -11,10 +11,7 @@ var app = (0, express_1.default)();
 var port = process.env.Port || 3000;
 dotenv_1.default.config();
 (0, conf_1.dbConnect)();
-app.use((0, cors_1.default)({
-    origin: "https://65c75e6f5586055c2b961700--teal-madeleine-225fa5.netlify.app",
-    credentials: true,
-}));
+app.use((0, cors_1.default)());
 var url_routes_1 = __importDefault(require("../src/routes/url.routes"));
 app.use(express_1.default.json());
 app.use('/api/url', url_routes_1.default);
