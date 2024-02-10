@@ -12,7 +12,7 @@ var port = process.env.Port || 3000;
 dotenv_1.default.config();
 (0, conf_1.dbConnect)();
 app.use((0, cors_1.default)({
-    origin: "*",
+    origin: "https://urlshortener-1.netlify.app",
     credentials: true,
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
     optionsSuccessStatus: 200
