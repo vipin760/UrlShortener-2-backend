@@ -6,7 +6,11 @@ const app = express()
 const port = process.env.Port || 3000
 dotenv.config()
 dbConnect()
-app.use(cors())
+app.use(cors({
+  origin:"https://65c75e6f5586055c2b961700--teal-madeleine-225fa5.netlify.app",
+  credentials: true,
+  optionsSuccessStatus:200
+}))
 
 import url_routes from "../src/routes/url.routes"
 
