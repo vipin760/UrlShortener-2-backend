@@ -6,7 +6,7 @@ const app = express()
 const port = process.env.Port || 3000
 dotenv.config()
 dbConnect()
-const whitelist = ['https://url-shortener-2-frontend.vercel.app/home'];
+const whitelist = ['http://localhost:3000/api/url'];
 
 const corsOptions = {
   origin: function (origin:any, callback:any) {

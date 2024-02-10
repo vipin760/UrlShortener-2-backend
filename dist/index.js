@@ -11,7 +11,7 @@ var app = (0, express_1.default)();
 var port = process.env.Port || 3000;
 dotenv_1.default.config();
 (0, conf_1.dbConnect)();
-var whitelist = ['https://url-shortener-2-frontend.vercel.app/home'];
+var whitelist = ['http://localhost:3000/api/url'];
 var corsOptions = {
     origin: function (origin, callback) {
         if (whitelist.indexOf(origin) !== -1 || !origin) {
