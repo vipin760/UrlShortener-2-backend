@@ -12,7 +12,7 @@ var port = process.env.Port || 3000;
 dotenv_1.default.config();
 (0, conf_1.dbConnect)();
 app.use((0, cors_1.default)({
-    origin: "https://urlshortener-1.netlify.app",
+    origin: "https://url-shortener-2-frontend-git-master-vipins-projects-f115abc8.vercel.app",
     credentials: true,
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
     optionsSuccessStatus: 200
