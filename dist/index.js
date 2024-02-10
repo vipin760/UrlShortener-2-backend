@@ -14,15 +14,9 @@ dotenv_1.default.config();
 app.use((0, cors_1.default)({
     origin: "https://65c75e6f5586055c2b961700--teal-madeleine-225fa5.netlify.app",
     credentials: true,
+    methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
     optionsSuccessStatus: 200
 }));
-app.get("/", function (_req, res) {
-    res.setHeader("Access-Control-Allow-Origin", "*");
-    res.setHeader("Access-Control-Allow-Credentials", "true");
-    res.setHeader("Access-Control-Max-Age", "1800");
-    res.setHeader("Access-Control-Allow-Headers", "content-type");
-    res.setHeader("Access-Control-Allow-Methods", "PUT, POST, GET, DELETE, PATCH, OPTIONS");
-});
 var url_routes_1 = __importDefault(require("../src/routes/url.routes"));
 app.use(express_1.default.json());
 app.use('/api/url', url_routes_1.default);
