@@ -6,13 +6,19 @@ const app = express()
 const port = process.env.Port || 3000
 dotenv.config()
 dbConnect()
-app.use(cors({
-  origin:"https://url-shortener-2-frontend-git-master-vipins-projects-f115abc8.vercel.app",
-  credentials: true,
-  methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
-  optionsSuccessStatus:200
-}))
+const whitelist = ['https://url-shortener-2-frontend-git-master-vipins-projects-f115abc8.vercel.app'];
 
+const corsOptions = {
+  origin: function (origin:any, callback:any) {
+    if (whitelist.indexOf(origin) !== -1 || !origin) {
+      callback(null, true);
+    } else {
+      callback(new Error('Not allowed by CORS'));
+    }
+  }
+};
+
+app.use(cors(corsOptions));
 
 import url_routes from "../src/routes/url.routes"
 
