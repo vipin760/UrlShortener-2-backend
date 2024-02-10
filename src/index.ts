@@ -7,7 +7,7 @@ const port = process.env.Port || 3000
 dotenv.config()
 dbConnect()
 app.use(cors({
-  origin:"https://65c75e6f5586055c2b961700--teal-madeleine-225fa5.netlify.app",
+  origin:"*",
   credentials: true,
   methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
   optionsSuccessStatus:200
