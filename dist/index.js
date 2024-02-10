@@ -13,7 +13,8 @@ dotenv_1.default.config();
 (0, conf_1.dbConnect)();
 app.use((0, cors_1.default)({
     origin: "http://localhost:4200",
-    credentials: true
+    credentials: true,
+    allowedHeaders: ['Content-Type', 'Authorization']
 }));
 var url_routes_1 = __importDefault(require("../src/routes/url.routes"));
 app.use(express_1.default.json());

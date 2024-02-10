@@ -8,7 +8,8 @@ dotenv.config()
 dbConnect()
 app.use(cors({
   origin:"http://localhost:4200",
-  credentials: true
+  credentials: true,
+  allowedHeaders: ['Content-Type', 'Authorization']
 }))
 
 import url_routes from "../src/routes/url.routes"
