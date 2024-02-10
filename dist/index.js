@@ -16,6 +16,13 @@ app.use((0, cors_1.default)({
     credentials: true,
     optionsSuccessStatus: 200
 }));
+app.get("/", function (_req, res) {
+    res.setHeader("Access-Control-Allow-Origin", "*");
+    res.setHeader("Access-Control-Allow-Credentials", "true");
+    res.setHeader("Access-Control-Max-Age", "1800");
+    res.setHeader("Access-Control-Allow-Headers", "content-type");
+    res.setHeader("Access-Control-Allow-Methods", "PUT, POST, GET, DELETE, PATCH, OPTIONS");
+});
 var url_routes_1 = __importDefault(require("../src/routes/url.routes"));
 app.use(express_1.default.json());
 app.use('/api/url', url_routes_1.default);

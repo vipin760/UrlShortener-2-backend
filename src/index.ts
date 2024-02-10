@@ -12,6 +12,14 @@ app.use(cors({
   optionsSuccessStatus:200
 }))
 
+app.get("/", (_req, res) => {
+  res.setHeader("Access-Control-Allow-Origin", "*")
+  res.setHeader("Access-Control-Allow-Credentials", "true");
+  res.setHeader("Access-Control-Max-Age", "1800");
+  res.setHeader("Access-Control-Allow-Headers", "content-type");
+  res.setHeader( "Access-Control-Allow-Methods", "PUT, POST, GET, DELETE, PATCH, OPTIONS" ); 
+   });
+
 import url_routes from "../src/routes/url.routes"
 
 app.use(express.json());
