@@ -12,7 +12,7 @@ var port = process.env.Port || 3000;
 dotenv_1.default.config();
 (0, conf_1.dbConnect)();
 var corsOptions = {
-    origin: "http://localhost:4200"
+    origin: "https://url-shortener-2-frontend.vercel.app"
 };
 app.use((0, cors_1.default)(corsOptions));
 var url_routes_1 = __importDefault(require("../src/routes/url.routes"));

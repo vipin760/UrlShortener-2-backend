@@ -8,7 +8,7 @@ dotenv.config()
 dbConnect()
 
 const corsOptions = {
-  origin:"http://localhost:4200"
+  origin:"https://url-shortener-2-frontend.vercel.app"
 };
 
 app.use(cors(corsOptions));
