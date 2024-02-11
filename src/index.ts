@@ -6,16 +6,9 @@ const app = express()
 const port = process.env.Port || 3000
 dotenv.config()
 dbConnect()
-const whitelist = ['http://localhost:3000/api/url'];
 
 const corsOptions = {
-  origin: function (origin:any, callback:any) {
-    if (whitelist.indexOf(origin) !== -1 || !origin) {
-      callback(null, true);
-    } else {
-      callback(new Error('Not allowed by CORS'));
-    }
-  }
+  origin:"http://localhost:4200"
 };
 
 app.use(cors(corsOptions));

@@ -79,7 +79,6 @@ router.post('/', (0, express_async_handler_1.default)(function (req, res) { retu
 router.get("/a", (0, express_async_handler_1.default)(function (_req, res) { return __awaiter(void 0, void 0, void 0, function () {
     return __generator(this, function (_a) {
         try {
-            console.log("working");
             res.status(200).send({ messege: "hello" });
         }
         catch (error) {
@@ -134,7 +133,6 @@ router.get("/un-short", (0, express_async_handler_1.default)(function (req, res)
             case 1:
                 urlExist = _a.sent();
                 if (urlExist) {
-                    console.log(urlExist.redirectUrl, "yup");
                     res.status(200).send({ data: urlExist.redirectUrl, message: "fetch unshorten url" });
                 }
                 else {

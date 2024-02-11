@@ -27,8 +27,6 @@ try {
 
 router.get("/a",asyncHandler (async(_req:Request,res:Response)=>{
     try {
-        console.log("working");
-        
         res.status(200).send({messege:"hello"})
     } catch (error) {
         res.json("error")
@@ -69,7 +67,6 @@ router.get("/un-short",asyncHandler ( async(req:Request,res:Response)=>{
         const urlExist = await UrlModel.findOne({shortUrl:shortId});
         
         if(urlExist){
-            console.log(urlExist.redirectUrl,"yup");
             res.status(200).send({data:urlExist.redirectUrl,message:"fetch unshorten url"})
         }else{
             res.status(401).send({data:'',message:"could not find in our collections"})

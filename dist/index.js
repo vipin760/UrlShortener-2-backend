@@ -11,16 +11,8 @@ var app = (0, express_1.default)();
 var port = process.env.Port || 3000;
 dotenv_1.default.config();
 (0, conf_1.dbConnect)();
-var whitelist = ['http://localhost:3000/api/url'];
 var corsOptions = {
-    origin: function (origin, callback) {
-        if (whitelist.indexOf(origin) !== -1 || !origin) {
-            callback(null, true);
-        }
-        else {
-            callback(new Error('Not allowed by CORS'));
-        }
-    }
+    origin: "http://localhost:4200"
 };
 app.use((0, cors_1.default)(corsOptions));
 var url_routes_1 = __importDefault(require("../src/routes/url.routes"));
